@@ -1,5 +1,5 @@
 'use strict'
-
+/*
 var age = parseInt(prompt('Introduce your age', 27));
 
 //tagged templates
@@ -23,8 +23,16 @@ function tagged(string, ...values){
  var Me = `Hello my age is ${age}, ${text()} `;
 
  document.write(Me);
+*/
 
+ var age = parseInt(prompt('Introduce your age', 27));
+ var text = infoUser`Hello my age is ${age}`;
 
+ function infoUser(strings, age){
+     return strings[0] + age;
+ }
+
+ document.write(text);
 
 
 
